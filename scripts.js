@@ -29,7 +29,7 @@ var sprintFunctions = {
   loudSnakeCase: function(string){
     // your code here
     var reWhiteSpace = new RegExp("/^\s+$/");
-var punctuationless = exampleString.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+var punctuationless = string.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
 var normalString = punctuationless.replace(/\s{2,}/g," ");
 function capitalize_Words(str)
 {
@@ -45,12 +45,22 @@ var endString = [];
        endString.push(splitString[i]);
      }
    }
-   return console.log(endString.join(''));
+   return endString.join('');
   },
 
-  compareArrays: function(){
+  compareArrays: function(array1,array2){
     // your code here (replace the return)
-    return "Finish compareArrays first!"
+    if(array1.length !== array2.length){
+  return false;
+}
+for (i = 0; i < array1.length; i++){
+   console.log(array1[i]);
+   console.log(array2[i]);
+   if (array1[i] !== array2[i]){
+    return console.log(false);
+}
+}
+return console.log("Finish compareArrays first!");
   },
 
   fizzBuzz: function(){
